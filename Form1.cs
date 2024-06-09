@@ -24,25 +24,19 @@ namespace sha256auth
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
             try
             {
                 WebClient wc = new WebClient();
                 wc.DownloadString("ファイルのURL");
                 wc.Dispose();
                 //アクセス可能な場合の処理
-
-                
-                
             }
             catch (WebException)
             {
                 //アクセスできない場合の処理
-
             }
-            
         }
-       
+        
             private void button1_Click(object sender, EventArgs e)
         {
             //チェックボックスを設定していない場合if (checkBox1.Cheked == true)は不要
@@ -51,20 +45,15 @@ namespace sha256auth
                 if (Password("ファイルのURL", textBox1.Text))
                 {
                     //パスワードがあっていた時の処理
-                   
-
                 }
                 else
                 {
                     //間違っている時の処理
                     MessageBox.Show("パスワードが違います", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-
-
                 ///<summary>
                 ///返り値がtrueなら一致falseなら不一致。
                 /// </summary>
-
             }
             else
             {
@@ -72,10 +61,8 @@ namespace sha256auth
             }
         }
 
-       
         private bool Password(string url, string password)
         {
-
             WebClient client = new WebClient();
             string webps = client.DownloadString(url);
 
@@ -98,9 +85,5 @@ namespace sha256auth
                 return false;
             }
         }
-       
-     
     }
 }
-
-
