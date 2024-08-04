@@ -15,3 +15,4 @@ WEB上に保存した暗号化ファイルでパスワード認証を行う為�
 なおWindows7未満(Vista以下)でのOSではSHA256に非対応のため、  
 7以上のOSでしか利用できません。  
 ### ※SHA256は大文字形式である必要があります
+This project is tested with BrowserStack.
